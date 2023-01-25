@@ -56,6 +56,7 @@ Apply for Application
     ClickText        Enter
     TypeText         number                      2
     ClickText        Enter
+    VerifyText       Site Plan
     UploadFile       Site Plan                   site plan copy.pdf
     
     ClickIcon        Upload
