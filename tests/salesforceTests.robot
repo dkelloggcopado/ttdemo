@@ -37,10 +37,8 @@ Apply for Application
     TypeText               Address Line 1              8870 N Long Lake Rd
     TypeText               City                        Traverse City
     #X-path Example - Copado can interact with the Shadom, if required.            Showing this as a FYI
-    SetConfig              ShadowDOM                   true
     ClickElement           //*[@id\="select_260"]
     ClickText              Michigan
-    SetConfig              ShadowDOM                   false
     TypeText               Zip                         49685
     ClickText              Enter
     TypeText               (___) ___-____              (231) 218-1704
@@ -57,19 +55,22 @@ Apply for Application
     ClickText              Enter
     TypeText               number                      2
     ClickText              Enter
-    ClickItem              Upload                      anchor=Site Plan            delay=2
+    ClickItem              Upload                      anchor=Site Plan
+    QVision.DoubleClick    Desktop
+    QVision.DoubleClick    suite
+    QVision.DoubleClick    files
     QVision.ClickText      site plan copy.pdf
     HotKey                 Enter
-    ClickItem              Upload                      anchor=Proof of Insurance                         delay=2
+    ClickItem              Upload                      anchor=Proof of Insurance                         delay=5
     QVision.ClickText      8th st insurance.pdf
     HotKey                 Enter
-    ClickItem              Upload                      anchor=Fire Escape Plan     delay=2
+    ClickItem              Upload                      anchor=Fire Escape Plan     delay=5
     QVision.ClickText      fire escape.pdf
     HotKey                 Enter
-    ClickItem              Upload                      anchor=Self-inspection checklist                  delay=2
+    ClickItem              Upload                      anchor=Self-inspection checklist                  delay=5
     QVision.ClickText      Inspection.pdf
-    HotKey                 Enter
-    ClickText              Next
+    HotKey                 Enter                       delay=2
+    ClickText              Next                        delay=7
     VerifyText             Bank Account
     VerifyText             Credit or Debit Card
 
