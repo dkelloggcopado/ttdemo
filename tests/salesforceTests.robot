@@ -58,4 +58,3 @@ Apply for Application
     ClickText        Enter
     VerifyText       Site Plan
     ClickIcon        uploadicon.png
-    UploadFile       Site Plan                   site plan copy.pdf
