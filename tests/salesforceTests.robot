@@ -61,13 +61,13 @@ Apply for Application
     QVision.DoubleClick    files
     QVision.ClickText      site plan copy.pdf
     HotKey                 Enter
-    ClickItem              Upload                      anchor=Proof of Insurance                         delay=5
+    ClickItem              Upload                      anchor=Proof of Insurance                         delay=7
     QVision.ClickText      8th st insurance.pdf
     HotKey                 Enter
-    ClickItem              Upload                      anchor=Fire Escape Plan     delay=5
+    ClickItem              Upload                      anchor=Fire Escape Plan     delay=7
     QVision.ClickText      fire escape.pdf
     HotKey                 Enter
-    ClickItem              Upload                      anchor=Self-inspection checklist                  delay=5
+    ClickItem              Upload                      anchor=Self-inspection checklist                  delay=7
     QVision.ClickText      Inspection.pdf
     HotKey                 Enter                       delay=2
     ClickText              Next                        delay=7
