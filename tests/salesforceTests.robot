@@ -23,7 +23,7 @@ Apply for Application
     ClickCheckbox    Fire Escape Plan            on
     ClickCheckbox    Self-inspection checklist (You can find this on our website here.)    on
     ClickText        Next
-    TypeText         What is the parcel number of the property you are applying for?      28-51-844-003-00
+    TypeText         What is the parcel number of the property you are applying for?    28-51-844-003-00
     ClickText        Next
     ClickText        Next
     TypeText         text                        Cozy 8th St Apartment
@@ -35,14 +35,14 @@ Apply for Application
     ClickText        Enter
     TypeText         Address Line 1              8870 N Long Lake Rd
     TypeText         City                        Traverse City
-    SetConfig        Shadom DOM                  true
-    ClickElement     State                       tag=button                  timeout=3
-    ClickText        Michigan                    anchor=Home Rental License Application and Renewal Form
-    ClickText        Michigan                    anchor=Home Rental License Application and Renewal Form
+    #X-path Example - Copado can interact with the Shadom, if required.    Showing this as a FYI
+    SetConfig        ShadowDOM                   true
+    ClickElement     //*[@id\="select_255"]
+    ClickText        Michigan
+    SetConfig        ShadowDOM                   false
     TypeText         Zip                         49685
     ClickText        Enter
     TypeText         (___) ___-____              (231) 218-1704
-    ClickText        What is your phone number?
     ClickText        Enter
     TypeText         email                       dkellogg@copado.com
     ClickText        Enter
@@ -56,3 +56,8 @@ Apply for Application
     ClickText        Enter
     TypeText         number                      2
     ClickText        Enter
+    UploadFile       Site Plan                   site plan copy.pdf
+    
+    ClickIcon        Upload
+    UseFrame     //iFrame
+    ClickText    Inspection.pdf
