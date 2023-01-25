@@ -21,9 +21,9 @@ Apply for Application
     ClickCheckbox    Site Plan                   on
     ClickCheckbox    Proof of Insurance          on
     ClickCheckbox    Fire Escape Plan            on
-    ClickCheckbox    Self-inspection checklist (You can find this on our website here.)    on
+    ClickCheckbox    Self-inspection checklist (You can find this on our website here.)         on
     ClickText        Next
-    TypeText         What is the parcel number of the property you are applying for?    28-51-844-003-00
+    TypeText         What is the parcel number of the property you are applying for?            28-51-844-003-00
     ClickText        Next
     ClickText        Next
     TypeText         text                        Cozy 8th St Apartment
@@ -35,7 +35,7 @@ Apply for Application
     ClickText        Enter
     TypeText         Address Line 1              8870 N Long Lake Rd
     TypeText         City                        Traverse City
-    #X-path Example - Copado can interact with the Shadom, if required.    Showing this as a FYI
+    #X-path Example - Copado can interact with the Shadom, if required.                         Showing this as a FYI
     SetConfig        ShadowDOM                   true
     ClickElement     //*[@id\="select_260"]
     ClickText        Michigan
@@ -60,4 +60,25 @@ Apply for Application
     ClickIcon        uploadicon.png
 
 Salesforce Test with PDF
-    
+    Login
+    LaunchApp        Sales
+    ClickText        Leads
+    ClickText        New
+
+    PickList         Salutation                  Mr
+    TypeText         First Name                  Dan
+    TypeText         Last Name                   Kellogg
+    TypeText         *Company                    Copado
+    TypeText         Title                       Solutions Engineer
+    TypeText         Phone                       5555555555
+    TypeText         Email                       dkellogg@Copado.com
+    PickList         Rating                      Warm
+    ClickText        Save                        partial_match=False
+    VerifyField      Title                       Solutions Engineer       partial_match=True
+    ClickText        Convert
+    TypeText         Account Name                Copado Demo
+    ClickText        Convert
+    ClickText        Copado Demo                 anchor=Account
+    ClickText        Notes & Attachments
+    ClickText        Upload Files
+
