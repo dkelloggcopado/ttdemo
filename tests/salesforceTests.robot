@@ -6,6 +6,7 @@ Resource             ../resources/common.robot
 Suite Setup          Setup Browser
 Suite Teardown       End suite
 Library              QWeb
+Library     QVision
 
 
 *** Test Cases ***
