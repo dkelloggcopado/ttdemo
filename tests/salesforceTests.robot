@@ -37,7 +37,7 @@ Apply for Application
     TypeText         City                        Traverse City
     #X-path Example - Copado can interact with the Shadom, if required.    Showing this as a FYI
     SetConfig        ShadowDOM                   true
-    ClickElement     //*[@id\="select_255"]
+    ClickElement     //*[@id\="select_260"]
     ClickText        Michigan
     SetConfig        ShadowDOM                   false
     TypeText         Zip                         49685
@@ -57,8 +57,5 @@ Apply for Application
     TypeText         number                      2
     ClickText        Enter
     VerifyText       Site Plan
+    ClickIcon        uploadicon.png
     UploadFile       Site Plan                   site plan copy.pdf
-    
-    ClickIcon        Upload
-    UseFrame     //iFrame
-    ClickText    Inspection.pdf
