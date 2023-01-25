@@ -58,3 +58,6 @@ Apply for Application
     ClickText        Enter
     VerifyText       Site Plan
     ClickIcon        uploadicon.png
+
+Salesforce Test with PDF
+    
