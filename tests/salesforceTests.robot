@@ -65,7 +65,6 @@ Salesforce Test with PDF
     LaunchApp              Sales
     ClickText              Leads
     ClickText              New
-
     PickList               Salutation                  Mr
     TypeText               First Name                  Dan
     TypeText               Last Name                   Kellogg
@@ -86,5 +85,8 @@ Salesforce Test with PDF
     QVision.DoubleClick    suite
     QVision.DoubleClick    files
     QVision.ClickText      Inspection.pdf
-    QVision.ClickIcon      Open
+    HotKey                 Enter                       delay=5
+    ClickText              Done
+    ClickText              Inspection
+    ClickText              Close
 
