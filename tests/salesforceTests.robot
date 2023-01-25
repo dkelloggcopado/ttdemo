@@ -5,6 +5,7 @@
 Resource             ../resources/common.robot
 Suite Setup          Setup Browser
 Suite Teardown       End suite
+Library              QWeb
 
 
 *** Test Cases ***
@@ -13,9 +14,7 @@ Apply for Application
     GoTo             https://www.traversecitymi.gov/services/residential-and-short-term-rentals/vacation-home-rental-license-application.html
     ScrollTo         Apply for a Vacation Home Rental License
     ClickText        Apply for a Vacation Home Rental License
-    ClickText        Apply for a Vacation Home Rental License
     SwitchWindow     NEW
-
     ClickText        Apply for a Home Rental License
     ClickText        Vacation Home Rental
     ClickText        I am the Owner
@@ -24,7 +23,7 @@ Apply for Application
     ClickCheckbox    Fire Escape Plan            on
     ClickCheckbox    Self-inspection checklist (You can find this on our website here.)    on
     ClickText        Next
-    TypeText         What is the parcel number of the property you are applying for?    28-51-844-003-00
+    TypeText         What is the parcel number of the property you are applying for?      28-51-844-003-00
     ClickText        Next
     ClickText        Next
     TypeText         text                        Cozy 8th St Apartment
@@ -36,7 +35,9 @@ Apply for Application
     ClickText        Enter
     TypeText         Address Line 1              8870 N Long Lake Rd
     TypeText         City                        Traverse City
-    ClickText        Virgin Islands, U.S.        anchor=State
+    SetConfig        Shadom DOM                  true
+    ClickElement     State                       tag=button                  timeout=3
+    ClickText        Michigan                    anchor=Home Rental License Application and Renewal Form
     ClickText        Michigan                    anchor=Home Rental License Application and Renewal Form
     TypeText         Zip                         49685
     ClickText        Enter
