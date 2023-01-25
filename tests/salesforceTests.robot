@@ -22,9 +22,9 @@ Apply for Application
     ClickCheckbox          Site Plan                   on
     ClickCheckbox          Proof of Insurance          on
     ClickCheckbox          Fire Escape Plan            on
-    ClickCheckbox          Self-inspection checklist (You can find this on our website here.)         on
+    ClickCheckbox          Self-inspection checklist (You can find this on our website here.)            on
     ClickText              Next
-    TypeText               What is the parcel number of the property you are applying for?            28-51-844-003-00
+    TypeText               What is the parcel number of the property you are applying for?               28-51-844-003-00
     ClickText              Next
     ClickText              Next
     TypeText               text                        Cozy 8th St Apartment
@@ -36,7 +36,7 @@ Apply for Application
     ClickText              Enter
     TypeText               Address Line 1              8870 N Long Lake Rd
     TypeText               City                        Traverse City
-    #X-path Example - Copado can interact with the Shadom, if required.         Showing this as a FYI
+    #X-path Example - Copado can interact with the Shadom, if required.            Showing this as a FYI
     SetConfig              ShadowDOM                   true
     ClickElement           //*[@id\="select_260"]
     ClickText              Michigan
@@ -57,8 +57,21 @@ Apply for Application
     ClickText              Enter
     TypeText               number                      2
     ClickText              Enter
-    VerifyText             Site Plan
-    ClickIcon              uploadicon.png
+    ClickItem              Upload                      anchor=Site Plan            delay=2
+    QVision.ClickText      site plan copy.pdf
+    HotKey                 Enter
+    ClickItem              Upload                      anchor=Proof of Insurance                         delay=2
+    QVision.ClickText      8th st insurance.pdf
+    HotKey                 Enter
+    ClickItem              Upload                      anchor=Fire Escape Plan     delay=2
+    QVision.ClickText      fire escape.pdf
+    HotKey                 Enter
+    ClickItem              Upload                      anchor=Self-inspection checklist                  delay=2
+    QVision.ClickText      Inspection.pdf
+    HotKey                 Enter
+    ClickText              Next
+    VerifyText             Bank Account
+    VerifyText             Credit or Debit Card
 
 Salesforce Test with PDF
     Login
@@ -74,7 +87,7 @@ Salesforce Test with PDF
     TypeText               Email                       dkellogg@Copado.com
     PickList               Rating                      Warm
     ClickText              Save                        partial_match=False
-    VerifyField            Title                       Solutions Engineer       partial_match=True
+    VerifyField            Title                       Solutions Engineer          partial_match=True
     ClickText              Convert
     TypeText               Account Name                Copado Demo
     ClickText              Convert
