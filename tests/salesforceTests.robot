@@ -67,11 +67,40 @@ Apply for Application
     ClickItem              Upload                      anchor=Fire Escape Plan     delay=7
     QVision.ClickText      fire escape.pdf
     HotKey                 Enter
-    ClickItem              Upload                      anchor=Self-inspection checklist                  
+    ClickItem              Upload                      anchor=Self-inspection checklist                  delay=7
     QVision.ClickText      Inspection.pdf
     HotKey                 Enter                       delay=2
     ClickText              Next                        delay=7
     VerifyText             Bank Account
     VerifyText             Credit or Debit Card
-    VerifyText             $226.88
+
+Salesforce Test with PDF
+    Login
+    LaunchApp              Sales
+    ClickText              Leads
+    ClickText              New
+    PickList               Salutation                  Mr
+    TypeText               First Name                  Dan
+    TypeText               Last Name                   Kellogg
+    TypeText               *Company                    Copado
+    TypeText               Title                       Solutions Engineer
+    TypeText               Phone                       5555555555
+    TypeText               Email                       dkellogg@Copado.com
+    PickList               Rating                      Warm
+    ClickText              Save                        partial_match=False
+    VerifyField            Title                       Solutions Engineer          partial_match=True
+    ClickText              Convert
+    TypeText               Account Name                Copado Demo
+    ClickText              Convert
+    ClickText              Copado Demo                 anchor=Account
+    ClickText              Notes & Attachments
+    ClickText              Upload Files
+    QVision.ClickText      Desktop
+    QVision.DoubleClick    suite
+    QVision.DoubleClick    files
+    QVision.ClickText      Inspection.pdf
+    HotKey                 Enter                       delay=5
+    ClickText              Done
+    ClickText              Inspection
+    ClickText              Close
 
