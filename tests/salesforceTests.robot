@@ -13,7 +13,7 @@ Library                    QVision
 Apply for Application
 
     GoTo                   https://www.traversecitymi.gov/services/residential-and-short-term-rentals/vacation-home-rental-license-application.html
-    ScrollTo               Apply for a Vacation Home Rental License
+    ScrollTo               Apply for a Vacation Home Rental License                delay=3
     ClickText              Apply for a Vacation Home Rental License
     SwitchWindow           NEW
     ClickText              Apply for a Home Rental License
