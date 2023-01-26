@@ -67,10 +67,11 @@ Apply for Application
     ClickItem              Upload                      anchor=Fire Escape Plan     delay=7
     QVision.ClickText      fire escape.pdf
     HotKey                 Enter
-    ClickItem              Upload                      anchor=Self-inspection checklist                  delay=7
+    ClickItem              Upload                      anchor=Self-inspection checklist                  
     QVision.ClickText      Inspection.pdf
     HotKey                 Enter                       delay=2
     ClickText              Next                        delay=7
     VerifyText             Bank Account
     VerifyText             Credit or Debit Card
+    VerifyText             $226.88
 
